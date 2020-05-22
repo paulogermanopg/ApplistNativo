@@ -40,11 +40,11 @@ const menuNavigator = createDrawerNavigator(menuRoutes)
 const MainRoutes = {
     Auth: {
         name: 'Auth',
-        screen: Auth,
+        screen: Auth
     },
     Home: {
         name: 'Home',
-        screen: menuNavigator,
+        screen: menuNavigator
     }
 }
 
