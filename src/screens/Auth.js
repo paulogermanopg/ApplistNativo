@@ -11,8 +11,8 @@ import { server, showError, showSuccess } from '../common'
 
 const initialState = {
     name: '',
-    email: '',
-    password: '',
+    email: 'Teste@teste.com.br',
+    password: '123456',
     confirmPassword: '',
     stageNew: false
 }
@@ -54,7 +54,7 @@ export default class Auth extends Component {
             })
 
             axios.defaults.headers.common['Authorization'] = `bearer ${res.data.token}`
-            this.props.navigation.navigate('Home')
+            this.props.navigation.navigate('Home', res.data)
         } catch(e) {
             showError(e)
         }
