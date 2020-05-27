@@ -20,7 +20,7 @@ export default class AuthOrApp extends Component {
             axios.defaults.headers.common['Authorization'] = `bearer ${userData.token}`
             this.props.navigation.navigate('Home', userData)
         } else {
-            this.props.navigation.navigate('Auth')
+            this.props.navigation.navigate('Home')
         }
     }
 
